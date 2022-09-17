@@ -29,7 +29,7 @@ toolbar.addEventListener('click', e => {
         }else if(alphabet.charCodeAt(0) >= 97 && alphabet.charCodeAt(0) <= 122){
             speech.text = 'small '+ alphabet
         }else{
-            speech.text = 'small y'+ 
+            speech.text = 'small y'
         }
 
         document.getElementById("random_alphabet").innerHTML = alphabet
