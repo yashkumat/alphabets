@@ -24,10 +24,12 @@ toolbar.addEventListener('click', e => {
 
         var alphabet = alphabets[Math.floor(Math.random()*alphabets.length)];
 
-        if (alphabet.charCodeAt(0) >= 65 && alphabet.charCodeAt(0) <= 96){
+        if(alphabet.charCodeAt(0) >= 65 && alphabet.charCodeAt(0) <= 90){
             speech.text = 'capital ' + alphabet
-        }else{
+        }else(alphabet.charCodeAt(0) >= 97 && alphabet.charCodeAt(0) <= 122){
             speech.text = 'small '+ alphabet
+        }else{
+            speech.text = 'small y'+ 
         }
 
         document.getElementById("random_alphabet").innerHTML = alphabet
@@ -36,6 +38,9 @@ toolbar.addEventListener('click', e => {
     }
 
     if(e.target.id == 'speak'){
+        if(speech.text == ""){
+            speech.text = 'small y'
+        }
         window.speechSynthesis.speak(speech);
     }
 });
