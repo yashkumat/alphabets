@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta description="Learn To Read & Write Alphabets">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+      <title>Learn to Read & Write</title>
+  </head>
+  <body>
+      <section class="container">
+          <div id="toolbar">
+              <h1>Learn to Read & Write Alphabets</h1>
+              
+              <label for="stroke">Color</label>
+              <input id="stroke" name='stroke' type="color">
+              <label for="lineWidth">Thickness</label>
+              <input id="lineWidth" name='lineWidth' type="number" value="25">
+              <button id="clear">Next</button>
+              <button id="speak">Speak</button>
+          </div>
+          <div class="drawing-board">
+            <div class="random_alphabet_container">
+                <span id="random_alphabet">y</span>
+            </div>
+            <canvas id="drawing-board"></canvas>
+          </div>
+      </section>
+      <script  src="./script.js"></script>
+  </body>
+</html>
