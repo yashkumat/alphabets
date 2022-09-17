@@ -19,7 +19,7 @@ speech.lang = "en";
 
 toolbar.addEventListener('click', e => {
     
-    if (e.target.id === 'clear') {
+    if (e.target.id === 'next') {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         var alphabet = alphabets[Math.floor(Math.random()*alphabets.length)];
@@ -34,6 +34,14 @@ toolbar.addEventListener('click', e => {
 
         document.getElementById("random_alphabet").innerHTML = alphabet
         
+        window.speechSynthesis.speak(speech);
+    }
+    
+    if (e.target.id === 'clear') {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        if(speech.text == ""){
+            speech.text = 'small y'
+        }
         window.speechSynthesis.speak(speech);
     }
 
