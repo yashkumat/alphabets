@@ -26,7 +26,7 @@ toolbar.addEventListener('click', e => {
 
         if(alphabet.charCodeAt(0) >= 65 && alphabet.charCodeAt(0) <= 90){
             speech.text = 'capital ' + alphabet
-        }else(alphabet.charCodeAt(0) >= 97 && alphabet.charCodeAt(0) <= 122){
+        }else if(alphabet.charCodeAt(0) >= 97 && alphabet.charCodeAt(0) <= 122){
             speech.text = 'small '+ alphabet
         }else{
             speech.text = 'small y'+ 
